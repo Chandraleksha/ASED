@@ -1,0 +1,30 @@
+//negative test cases
+import math
+import unittest
+def add_num(a,b):
+    sum=a+b;
+    return sum; 
+num1=25 
+num2=55
+print("The sum is",add_num(num1,num2))
+
+class CalculatorTests(unittest.TestCase):
+  def test_add(self):
+    calc = add_num()
+    self.assertEqual(10, calc.add(7, 3))
+
+if __name__ == '__main__':
+   unittest.main()
+   
+//positive test case
+import unittest
+def add_num(a,b):
+  return a+b
+
+class CalculatorTests(unittest.TestCase):
+  def test_add(self):
+    result = add_num(7,3)
+    self.assertEqual(result, 10)
+
+if __name__== "__main__":
+   unittest.main()
